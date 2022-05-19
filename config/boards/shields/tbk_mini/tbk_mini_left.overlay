@@ -1,0 +1,26 @@
+/*
+ * Copyright (c) 2020 Pete Johanson
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "tbk_mini.dtsi"
+
+&kscan0 {
+	// col-gpios
+	// 	= <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // B4
+	// 	, <&gpio0 9  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // E6
+	// 	, <&gpio0 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // C6
+	// 	, <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // B1
+	// 	, <&gpio0 3  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // B3
+	// 	, <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // B2
+	// 	;
+	col-gpios
+		= <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&gpio0 3  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&gpio0 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&gpio0 9  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		;
+};
