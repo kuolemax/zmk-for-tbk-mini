@@ -23,17 +23,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp N1>
-                , <&macro_press &kp N8>
-                , <&macro_press &kp N5>
-                , <&macro_press &kp N6>
-                , <&macro_press &kp N8>
-                , <&macro_press &kp N2>
-                , <&macro_press &kp N7>
-                , <&macro_press &kp N6>
-                , <&macro_press &kp N1>
-                , <&macro_press &kp N9>
-                , <&macro_press &kp N6>
+                = <&macro_press
+                    &kp N1 &kp N8 &kp N5 
+                    &kp N6 &kp N8 &kp N2 &kp N7 
+                    &kp N6 &kp N1 &kp N9 &kp N6>
                 ;
         };
         macro_email_q: macro_email_q {
@@ -42,30 +35,15 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings 
-                = <&macro_press &kp C>
-                , <&macro_press &kp H>
-                , <&macro_press &kp E>
-                , <&macro_press &kp N>
-                , <&macro_press &kp Z>
-                , <&macro_press &kp H>
-                , <&macro_press &kp I>
-                , <&macro_press &kp H>
-                , <&macro_press &kp A>
-                , <&macro_press &kp O>
-                , <&macro_press &kp N0>
-                , <&macro_press &kp N1>
-                , <&macro_press &kp N2>
-                , <&macro_press &kp N6>
-                , <&macro_press &kp AT>
-                , <&macro_press &kp G>
-                , <&macro_press &kp M>
-                , <&macro_press &kp A>
-                , <&macro_press &kp I>
-                , <&macro_press &kp L>
-                , <&macro_press &kp DOT>
-                , <&macro_press &kp C>
-                , <&macro_press &kp O>
-                , <&macro_press &kp M>
+                = <&macro_press 
+                    &kp C &kp H &kp E &kp N 
+                    &kp Z &kp H &kp I 
+                    &kp H &kp A &kp O 
+                    &kp N0 &kp N1 &kp N2 &kp N6 
+                    &kp AT 
+                    &kp G &kp M &kp A &kp I &kp L 
+                    &kp DOT 
+                    &kp C &kp O &kp M>
                 ;
         };
         macro_email_g: macro_email_g {
@@ -74,27 +52,15 @@
             label = "MACRO_EMAIL_GMAIL";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp C>
-                , <&macro_press &kp H>
-                , <&macro_press &kp E>
-                , <&macro_press &kp N>
-                , <&macro_press &kp Z>
-                , <&macro_press &kp H>
-                , <&macro_press &kp I>
-                , <&macro_press &kp H>
-                , <&macro_press &kp A>
-                , <&macro_press &kp O>
-                , <&macro_press &kp N1>
-                , <&macro_press &kp N1>
-                , <&macro_press &kp N0>
-                , <&macro_press &kp N9>
-                , <&macro_press &kp AT>
-                , <&macro_press &kp Q>
-                , <&macro_press &kp Q>
-                , <&macro_press &kp DOT>
-                , <&macro_press &kp C>
-                , <&macro_press &kp O>
-                , <&macro_press &kp M>
+                = <&macro_press 
+                    &kp C &kp H &kp E &kp N 
+                    &kp Z &kp H &kp I 
+                    &kp H &kp A &kp O 
+                    &kp N1 &kp N1 &kp N0 &kp N9 
+                    &kp AT 
+                    &kp Q &kp Q 
+                    &kp DOT 
+                    &kp C &kp O &kp M>
                 ;
         };
         macro_pass: macro_pass {
@@ -103,20 +69,12 @@
             label = "MACRO_PASS";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LS(C)>
-                , <&macro_press &kp H>
-                , <&macro_press &kp E>
-                , <&macro_press &kp N>
-                , <&macro_press &kp Z>
-                , <&macro_press &kp H>
-                , <&macro_press &kp I>
-                , <&macro_press &kp H>
-                , <&macro_press &kp A>
-                , <&macro_press &kp O>
-                , <&macro_press &kp N1>
-                , <&macro_press &kp N1>
-                , <&macro_press &kp DOT>
-                , <&macro_press &kp N9>
+                = <&macro_press 
+                    &kp LS(C) &kp H &kp E &kp N 
+                    &kp Z &kp H &kp I 
+                    &kp H &kp A &kp O 
+                    &kp N1 &kp N1 
+                    &kp DOT &kp N9>
                 ;
         };
         macro_pass_2: macro_pass_2 {
@@ -125,18 +83,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LS(L)>
-                , <&macro_press &kp O>
-                , <&macro_press &kp V>
-                , <&macro_press &kp E>
-                , <&macro_press &kp LS(L)>
-                , <&macro_press &kp I>
-                , <&macro_press &kp F>
-                , <&macro_press &kp E>
-                , <&macro_press &kp N1>
-                , <&macro_press &kp N1>
-                , <&macro_press &kp DOT>
-                , <&macro_press &kp N9>
+                = <&macro_press 
+                    &kp LS(L) &kp O &kp V &kp E 
+                    &kp LS(L) &kp I &kp F &kp E 
+                    &kp N1 &kp N1 &kp DOT &kp N9>
                 ;
         };
     };
