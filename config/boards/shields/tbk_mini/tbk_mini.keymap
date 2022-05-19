@@ -16,51 +16,130 @@
 #define SETTING 4
 
 / {
-    behaviors {
-        macro_phone: macro_1 {
+    macros {
+        macro_phone: macro_phone {
             // 18568276196
-            compatible = "zmk,behavior-macro";
             label = "MACRO_PHONE";
-            #binding-cells = <0>;
-            bindings = <&kp N1>, <&kp N8>, <&kp N5>, <&kp N6>, <&kp N8>, 
-                        <&kp N2>, <&kp N7>, <&kp N6>, <&kp N1>, <&kp N9>, <&kp N6>;
-        };
-        macro_email_q: macro_2 {
-            // chenzhihao0126@gmail.com
             compatible = "zmk,behavior-macro";
-            label = "MACRO_EMAIL_QQ";
             #binding-cells = <0>;
-            bindings = <&kp C>, <&kp H>, <&kp E>, <&kp N>, <&kp Z>, <&kp H>, <&kp I>, 
-                        <&kp H>, <&kp A>, <&kp O>, <&kp N0>, <&kp N1>, <&kp N2>, <&kp N6>,
-                        <&kp AT>, <&kp G>, <&kp M>, <&kp A>, <&kp I>, <&kp L>, <&kp DOT>, <&kp C>, <&kp O>, <&kp M>;
+            bindings
+                = <&macro_press &kp N1>
+                , <&macro_press &kp N8>
+                , <&macro_press &kp N5>
+                , <&macro_press &kp N6>
+                , <&macro_press &kp N8>
+                , <&macro_press &kp N2>
+                , <&macro_press &kp N7>
+                , <&macro_press &kp N6>
+                , <&macro_press &kp N1>
+                , <&macro_press &kp N9>
+                , <&macro_press &kp N6>
+                ;
         };
-        macro_email_g: macro_3 {
+        macro_email_q: macro_email_q {
+            // chenzhihao0126@gmail.com
+            label = "MACRO_EMAIL_QQ";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings 
+                = <&macro_press &kp C>
+                , <&macro_press &kp H>
+                , <&macro_press &kp E>
+                , <&macro_press &kp N>
+                , <&macro_press &kp Z>
+                , <&macro_press &kp H>
+                , <&macro_press &kp I>
+                , <&macro_press &kp H>
+                , <&macro_press &kp A>
+                , <&macro_press &kp O>
+                , <&macro_press &kp N0>
+                , <&macro_press &kp N1>
+                , <&macro_press &kp N2>
+                , <&macro_press &kp N6>
+                , <&macro_press &kp AT>
+                , <&macro_press &kp G>
+                , <&macro_press &kp M>
+                , <&macro_press &kp A>
+                , <&macro_press &kp I>
+                , <&macro_press &kp L>
+                , <&macro_press &kp DOT>
+                , <&macro_press &kp C>
+                , <&macro_press &kp O>
+                , <&macro_press &kp M>
+                ;
+        };
+        macro_email_g: macro_email_g {
             // chenzhihao1109@qq.com
             compatible = "zmk,behavior-macro";
             label = "MACRO_EMAIL_GMAIL";
             #binding-cells = <0>;
-            bindings = <&kp C>, <&kp H>, <&kp E>, <&kp N>, <&kp Z>, <&kp H>, <&kp I>, 
-                        <&kp H>, <&kp A>, <&kp O>, <&kp N1>, <&kp N1>, <&kp N0>, <&kp N9>,
-                        <&kp AT>, <&kp Q>, <&kp Q>, <&kp DOT>, <&kp C>, <&kp O>, <&kp M>;
+            bindings
+                = <&macro_press &kp C>
+                , <&macro_press &kp H>
+                , <&macro_press &kp E>
+                , <&macro_press &kp N>
+                , <&macro_press &kp Z>
+                , <&macro_press &kp H>
+                , <&macro_press &kp I>
+                , <&macro_press &kp H>
+                , <&macro_press &kp A>
+                , <&macro_press &kp O>
+                , <&macro_press &kp N1>
+                , <&macro_press &kp N1>
+                , <&macro_press &kp N0>
+                , <&macro_press &kp N9>
+                , <&macro_press &kp AT>
+                , <&macro_press &kp Q>
+                , <&macro_press &kp Q>
+                , <&macro_press &kp DOT>
+                , <&macro_press &kp C>
+                , <&macro_press &kp O>
+                , <&macro_press &kp M>
+                ;
         };
-        macro_pass: macro_4 {
+        macro_pass: macro_pass {
             // Chenzhihao11.9
             compatible = "zmk,behavior-macro";
             label = "MACRO_PASS";
             #binding-cells = <0>;
-            bindings = <&kp LS(C)>, <&kp H>, <&kp E>, <&kp N>, <&kp Z>, <&kp H>, <&kp I>, 
-                        <&kp H>, <&kp A>, <&kp O>, <&kp N1>, <&kp N1>, <&kp DOT>, <&kp N9>;
+            bindings
+                = <&macro_press &kp LS(C)>
+                , <&macro_press &kp H>
+                , <&macro_press &kp E>
+                , <&macro_press &kp N>
+                , <&macro_press &kp Z>
+                , <&macro_press &kp H>
+                , <&macro_press &kp I>
+                , <&macro_press &kp H>
+                , <&macro_press &kp A>
+                , <&macro_press &kp O>
+                , <&macro_press &kp N1>
+                , <&macro_press &kp N1>
+                , <&macro_press &kp DOT>
+                , <&macro_press &kp N9>
+                ;
         };
-        macro_pass2: macro_5 {
+        macro_pass_2: macro_pass_2 {
             // LoveLife11.9
-            compatible = "zmk,behavior-macro";
             label = "MACRO_PASS_2";
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(L)>, <&kp O>, <&kp V>, <&kp E>, 
-                        <&kp LS(L)>, <&kp I>, <&kp F>, <&kp E>, 
-                        <&kp A>, <&kp O>, <&kp N1>, <&kp N1>, <&kp DOT>, <&kp N9>;
+            bindings
+                = <&macro_press &kp LS(L)>
+                , <&macro_press &kp O>
+                , <&macro_press &kp V>
+                , <&macro_press &kp E>
+                , <&macro_press &kp LS(L)>
+                , <&macro_press &kp I>
+                , <&macro_press &kp F>
+                , <&macro_press &kp E>
+                , <&macro_press &kp N1>
+                , <&macro_press &kp N1>
+                , <&macro_press &kp DOT>
+                , <&macro_press &kp N9>
+                ;
         };
-	};
+    };
 
 
     keymap {
@@ -77,7 +156,7 @@
     &kp TAB   &kp Q &kp W &kp E &kp R &kp T         &kp Y   &kp U &kp I     &kp O   &kp P    &kp BSPC
     &kp LCTRL &kp A &kp S &kp D &kp F &kp G         &kp H   &kp J &kp K     &kp L   &kp SEMI &kp SQT
     &kp LSHFT &kp Z &kp X &kp C &kp V &kp B         &kp N   &kp M &kp COMMA &kp DOT &kp FSLH &kp CLCK
-            &mt LGUI TILDE &lt NUMBER SPACE &kp LALT        &lt HOTKEY RET &lt SYMBOL SPACE &mt RGUI BSPC
+            &mt LGUI TILDE &lt NUMBER SPACE &kp LALT        &lt HOTKEY RET &lt SYMBOL SPACE &kp BSPC
             >;
         };
 
@@ -92,7 +171,7 @@
         &kp ESC  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5      &kp N6    &kp N7       &kp N8   &kp N9     &kp N0   &kp DEL
         &trans   &kp F1 &kp F2 &kp F3 &kp F4 &kp F5      &kp LEFT  &kp DOWN     &kp UP   &kp RIGHT  &none    &none
         &trans   &kp F6 &kp F7 &kp F8 &kp F9 &kp F10     &kp F11   &kp F12      &none     &none     &none    &none
-                                &trans &trans &trans     &trans    &mo SETTING  &trans
+                                &trans &trans &trans     &trans    &mo SETTING  &kp DEL
             >;
         };
 
@@ -120,7 +199,7 @@
             label = "HOTKEY";
             bindings = <
     &none &macro_email_q &macro_phone &macro_pass   &none &none        &none &none &none &none &none &none
-    &none &macro_email_g &none        &macro_pass2  &none &none        &none &none &none &none &none &none
+    &none &macro_email_g &none        &macro_pass_2 &none &none        &none &none &none &none &none &none
     &none &none        &none        &none       &none &none        &none &none &none &none &none &none
                                             &trans &trans &trans &trans &trans
             >;
@@ -140,14 +219,5 @@
                                                         &trans          &trans &trans             &tog SETTING &trans       &trans
             >;
         };
-    //     setting_layer {
-    //         label = "SETTING";
-    //         bindings = <
-    // &none  &none  &none  &none  &none  &none       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
-    // &none  &none  &none  &none  &none  &reset      &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &none        &none
-    // &none  &none  &none  &none  &none  &none       &kp HOME     &kp END      &none        &none        &none        &none
-    //                 &trans  &trans  &trans             &tog SETTING &trans       &trans
-    //         >;
-    //     };
     };
 };
