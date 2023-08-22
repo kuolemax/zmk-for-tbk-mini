@@ -159,7 +159,7 @@
             label = "SETTING";
             bindings = <
         &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &none  &rgb_ug RGB_TOG    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
-        &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &none  &reset             &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &none        &none
+        &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &none  &sys_reset             &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &none        &none
         &none           &none           &none           &none           &none  &none              &kp HOME     &kp END      &none        &none        &none        &none
                                                         &trans          &trans &trans             &tog SETTING &trans       &trans
             >;
