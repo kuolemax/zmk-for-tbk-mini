@@ -5,8 +5,8 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define DEFAULT 0
@@ -17,151 +17,88 @@
 
 / {
     macros {
-        macro_phone: macro_phone {
-            // 18568276196
-            label = "MACRO_PHONE";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = < &kp N1 &kp N8 &kp N5 
-                    &kp N6 &kp N8 &kp N2 &kp N7 
-                    &kp N6 &kp N1 &kp N9 &kp N6>
-                ;
-        };
-        macro_email_q: macro_email_q {
-            // chenzhihao0126@gmail.com
-            label = "MACRO_EMAIL_QQ";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings 
-                = < &kp C &kp H &kp E &kp N 
-                    &kp Z &kp H &kp I 
-                    &kp H &kp A &kp O 
-                    &kp N0 &kp N1 &kp N2 &kp N6 
-                    &kp AT 
-                    &kp G &kp M &kp A &kp I &kp L 
-                    &kp DOT 
-                    &kp C &kp O &kp M>
-                ;
-        };
-        macro_email_g: macro_email_g {
-            // chenzhihao1109@qq.com
-            compatible = "zmk,behavior-macro";
-            label = "MACRO_EMAIL_GMAIL";
-            #binding-cells = <0>;
-            bindings
-                = < &kp C &kp H &kp E &kp N 
-                    &kp Z &kp H &kp I 
-                    &kp H &kp A &kp O 
-                    &kp N1 &kp N1 &kp N0 &kp N9 
-                    &kp AT 
-                    &kp Q &kp Q 
-                    &kp DOT 
-                    &kp C &kp O &kp M>
-                ;
-        };
-        macro_pass: macro_pass {
-            // Chenzhihao11.9
-            compatible = "zmk,behavior-macro";
-            label = "MACRO_PASS";
-            #binding-cells = <0>;
-            bindings
-                = < &kp LS(C) &kp H &kp E &kp N 
-                    &kp Z &kp H &kp I 
-                    &kp H &kp A &kp O 
-                    &kp N1 &kp N1 
-                    &kp DOT &kp N9>
-                ;
-        };
-        macro_pass_2: macro_pass_2 {
-            // LoveLife11.9
-            label = "MACRO_PASS_2";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = < &kp LS(L) &kp O &kp V &kp E 
-                    &kp LS(L) &kp I &kp F &kp E 
-                    &kp N1 &kp N1 &kp DOT &kp N9>
-                ;
-        };
     };
-
 
     keymap {
         compatible = "zmk,keymap";
 
-// -----------------------------------------------------------------------------------------
-// | TAB |  Q  |  W  |  E  |  R       |  T  |     |  Y  |  U        |  I  |  O  |  P  |   BKSP    |
-// | CTL |  A  |  S  |  D  |  F       |  G  |     |  H  |  J        |  K  |  L  |  ;  |     '     |
-// | ALT |  Z  |  X  |  C  |  V       |  B  |     |  N  |  M        |  ,  |  .  |  /  | SHFT/CLCK |
-//                    | GUI/~ | NUM/SPC | SHIFT |     | HTK/ENT | SYM/SPC  | GUI/BSPC |
+        // -----------------------------------------------------------------------------------------
+        // | TAB |  Q  |  W  |  E  |  R       |  T  |     |  Y  |  U        |  I  |  O  |  P  |   BKSP    |
+        // | CTL |  A  |  S  |  D  |  F       |  G  |     |  H  |  J        |  K  |  L  |  ;  |     '     |
+        // | ALT |  Z  |  X  |  C  |  V       |  B  |     |  N  |  M        |  ,  |  .  |  /  | SHFT/CLCK |
+        //                    | GUI/~ | NUM/SPC | SHIFT |     | HTK/ENT | SYM/SPC  | GUI/BSPC |
+
         default_layer {
             label = "DEFAULT";
             bindings = <
-    &kp TAB   &kp Q &kp W &kp E &kp R &kp T         &kp Y   &kp U &kp I     &kp O   &kp P    &kp BSPC
-    &kp LCTRL &kp A &kp S &kp D &kp F &kp G         &kp H   &kp J &kp K     &kp L   &kp SEMI &kp SQT
-    &kp LALT  &kp Z &kp X &kp C &kp V &kp B         &kp N   &kp M &kp COMMA &kp DOT &kp FSLH &kp CLCK
-            &mt LGUI TILDE &lt NUMBER SPACE &kp LSHFT        &lt HOTKEY RET &lt SYMBOL SPACE &kp BSPC
+&kp TAB    &kp Q  &kp W  &kp E           &kp R             &kp T      &kp Y           &kp U             &kp I      &kp O    &kp P     &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D           &kp F             &kp G      &kp H           &kp J             &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LALT   &kp Z  &kp X  &kp C           &kp V             &kp B      &kp N           &kp M             &kp COMMA  &kp DOT  &kp FSLH  &kp CLCK
+                         &mt LGUI TILDE  &lt NUMBER SPACE  &kp LSHFT  &lt HOTKEY RET  &lt SYMBOL SPACE  &kp BSPC
             >;
         };
 
-// -----------------------------------------------------------------------------------------
-// | ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL |
-// | CTL |  F1 |  F2 |  F3 | F4  |  F5 |   |  ←  |  ↓  |  ↑  |  →  |     |     |
-// | ALT |  F6 |  F7 |  F8 | F9  | F10 |   | F12 | F11 |     |     |     |     |
-//                   |     |     |     |   | SET |     |     |
+        // -----------------------------------------------------------------------------------------
+        // | ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL |
+        // | CTL |  F1 |  F2 |  F3 | F4  |  F5 |   |  ←  |  ↓  |  ↑  |  →  |     |     |
+        // | ALT |  F6 |  F7 |  F8 | F9  | F10 |   | F12 | F11 |     |     |     |     |
+        //                   |     |     |     |   | SET |     |     |
+
         number_layer {
             label = "NUMBER";
             bindings = <
-        &kp ESC  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5      &kp N6    &kp N7       &kp N8   &kp N9     &kp N0   &kp DEL
-        &trans   &kp F1 &kp F2 &kp F3 &kp F4 &kp F5      &kp LEFT  &kp DOWN     &kp UP   &kp RIGHT  &none    &none
-        &trans   &kp F6 &kp F7 &kp F8 &kp F9 &kp F10     &kp F11   &kp F12      &none     &none     &none    &none
-                                &trans &trans &trans     &trans    &mo SETTING  &kp DEL
+&kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5   &kp N6    &kp N7       &kp N8   &kp N9     &kp N0  &kp DEL
+&trans   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5   &kp LEFT  &kp DOWN     &kp UP   &kp RIGHT  &none   &none
+&trans   &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11   &kp F12      &none    &none      &none   &none
+                         &trans  &trans  &trans   &trans    &mo SETTING  &kp DEL
             >;
         };
 
-// -----------------------------------------------------------------------------------------
-// | ESC  |  !  |  @  |  #  |  $  |  %  |     |  ^   |  &   |  *   |  (   |  )  | DEL |
-// |      |     |     |  "  |  :  |  ~  |     |  -   |  =   |  [   |  ]   |  \  |     |
-// |      |     |     |  '  |  ;  |  `  |     |  _   |  +   |  {   |  }   | "|" |     |
-//                    |     | SET |     |     |      |      |      |
+        // -----------------------------------------------------------------------------------------
+        // | ESC  |  !  |  @  |  #  |  $  |  %  |     |  ^   |  &   |  *   |  (   |  )  | DEL |
+        // |      |     |     |  "  |  :  |  ~  |     |  -   |  =   |  [   |  ]   |  \  |     |
+        // |      |     |     |  '  |  ;  |  `  |     |  _   |  +   |  {   |  }   | "|" |     |
+        //                    |     | SET |     |     |      |      |      |
+
         symbol_layer {
             label = "SYMBOL";
             bindings = <
-        &kp ESC   &kp EXCL  &kp AT   &kp HASH &kp DLLR   &kp PRCNT      &kp CARET &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp DEL
-        &trans    &none     &none    &kp SQT  &kp COLON  &kp TILDE      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH  &none
-        &trans    &none     &none    &kp DQT  &kp SEMI   &kp GRAVE      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &none
-                                    &trans   &mo SETTING &trans         &trans    &trans      &trans
+&kp ESC  &kp EXCL  &kp AT  &kp HASH  &kp DLLR     &kp PRCNT  &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR  &kp DEL
+&trans   &none     &none   &kp SQT   &kp COLON    &kp TILDE  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &none
+&trans   &none     &none   &kp DQT   &kp SEMI     &kp GRAVE  &kp UNDER  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE  &none
+                           &trans    &mo SETTING  &trans     &trans     &trans     &trans
             >;
         };
 
-// -----------------------------------------------------------------------------------------
-// |   |   |   |   |   |   |     |   |   |   |   |   |   |
-// |   |   |   |   |   |   |     |   |   |   |   |   |   |
-// |   |   |   |   |   |   |     |   |   |   |   |   |   |
-//             |     |     |     |     |     |
+        // -----------------------------------------------------------------------------------------
+        // |   |   |   |   |   |   |     |   |   |   |   |   |   |
+        // |   |   |   |   |   |   |     |   |   |   |   |   |   |
+        // |   |   |   |   |   |   |     |   |   |   |   |   |   |
+        //             |     |     |     |     |     |
+
         hotkey_layer {
             label = "HOTKEY";
             bindings = <
-    &none &macro_email_q &macro_phone &macro_pass   &none &none        &none &none &none &none &none &none
-    &none &macro_email_g &none        &macro_pass_2 &none &none        &none &none &none &none &none &none
-    &none &none        &none        &none       &none &none        &none &none &none &none &none &none
-                                            &trans &trans &trans &trans &trans
+&none  &macro_email_q  &macro_phone  &macro_pass    &none   &none   &none   &none   &none  &none  &none  &none
+&none  &macro_email_g  &none         &macro_pass_2  &none   &none   &none   &none   &none  &none  &none  &none
+&none  &none           &none         &none          &none   &none   &none   &none   &none  &none  &none  &none
+                                     &trans         &trans  &trans  &trans  &trans
             >;
         };
 
-// -----------------------------------------------------------------------------------------
-// | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ | | RGB TOG |     |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
-// | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI- | |         |     |       |     |     |     |     |        |
-// |          |          |          |          | |         |     | RESET |     |     |     |     |        |
-//                                  |          | |         |     |       |     |     |
+        // -----------------------------------------------------------------------------------------
+        // | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ | | RGB TOG |     |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
+        // | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI- | |         |     |       |     |     |     |     |        |
+        // |          |          |          |          | |         |     | RESET |     |     |     |     |        |
+        //                                  |          | |         |     |       |     |     |
+
         setting_layer {
             label = "SETTING";
             bindings = <
-        &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &none  &rgb_ug RGB_TOG    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
-        &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &none  &sys_reset             &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &none        &none
-        &none           &none           &none           &none           &none  &none              &kp HOME     &kp END      &none        &none        &none        &none
-                                                        &trans          &trans &trans             &tog SETTING &trans       &trans
+&rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none   &rgb_ug RGB_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &none   &sys_reset       &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &none         &none
+&none            &none            &none            &none            &none   &none            &kp HOME      &kp END       &none         &none         &none         &none
+                                                   &trans           &trans  &trans           &tog SETTING  &trans        &trans
             >;
         };
     };
